@@ -1,5 +1,6 @@
 class_name EldritchAdaptiveMusic extends Node
 
+signal half_bar
 signal current_beat
 signal current_bar
 signal current_four_bar
@@ -25,6 +26,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		win()
+	if Input.is_action_just_pressed("right_click"):
+		lose()
 	
 	if !master_track.playing:
 		return
@@ -38,10 +41,12 @@ func _process(_delta: float) -> void:
 	last_beat_index = current_beat_index
 	bar_index += 1
 	if bar_index % 4 == 0:
+		half_bar.emit()
+	if bar_index % 8 == 0:
 		current_bar.emit()
-	if bar_index % (4 * 4) == 0:
+	if bar_index % (8 * 4) == 0:
 		current_four_bar.emit()
-	if bar_index % (4 * 4 * 2) == 0:
+	if bar_index % (8 * 4 * 2) == 0:
 		current_eight_bar.emit()
 
 func start():

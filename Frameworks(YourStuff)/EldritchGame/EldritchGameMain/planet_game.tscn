@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bk6iqdpwoi5hx" path="res://Frameworks(YourStuff)/EldritchGame/EldritchGameMain/planet_game.gd" id="1_ayi0r"]
 [ext_resource type="PackedScene" uid="uid://bu0fq1a3hl3p6" path="res://Frameworks(YourStuff)/EldritchGame/ParticlePathing/particle_pathing.tscn" id="2_yw6km"]
-[ext_resource type="PackedScene" uid="uid://jaq2sk636hlb" path="res://Frameworks(YourStuff)/EldritchGame/Planets/Scenes/Planet.tscn" id="3_k2kom"]
 [ext_resource type="PackedScene" uid="uid://cd6d6c3cl3n5o" path="res://Frameworks(YourStuff)/EldritchGame/BigGuy/monsta.tscn" id="4_eq008"]
 
 [sub_resource type="Curve2D" id="Curve2D_3vgps"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 832, 329, 0, 0, 0, 0, 673, 316, 0, 0, 0, 0, 512, 319, 0, 0, 0, 0, 324, 335, 0, 0, 0, 0, 292, 380, 0, 0, 0, 0, 309, 438, 0, 0, 0, 0, 455, 473, 0, 0, 0, 0, 736, 465, 0, 0, 0, 0, 850, 452, 0, 0, 0, 0, 906, 394, 0, 0, 0, 0, 832, 329)
+"points": PackedVector2Array(0, 0, 0, 0, 307, 29, 0, 0, 0, 0, -35, 26, 0, 0, 0, 0, -163, 24, 0, 0, 0, 0, -255, 72, 0, 0, 0, 0, -238, 119, 0, 0, 0, 0, -159, 154, 0, 0, 0, 0, -26, 162, 0, 0, 0, 0, 330, 161, 0, 0, 0, 0, 470, 115, 0, 0, 0, 0, 462, 62, 0, 0, 0, 0, 309, 29)
 }
 point_count = 11
 
@@ -23,32 +22,9 @@ mouse_filter = 2
 color = Color(0.12156863, 0.12156863, 0.11764706, 1)
 
 [node name="ParticlePathing" parent="." unique_id=248845500 instance=ExtResource("2_yw6km")]
-position = Vector2(-8, -36)
+position = Vector2(481, 279)
 curve = SubResource("Curve2D_3vgps")
-
-[node name="Planet" parent="ParticlePathing" unique_id=2078059064 instance=ExtResource("3_k2kom")]
-self_modulate = Color(1, 0, 1, 1)
-position = Vector2(-1, 1)
-
-[node name="Planet2" parent="ParticlePathing" unique_id=333131645 instance=ExtResource("3_k2kom")]
-modulate = Color(0, 1, 1, 1)
-position = Vector2(-1, 1)
-scale = Vector2(0.87, 0.87)
-
-[node name="Planet3" parent="ParticlePathing" unique_id=1704868276 instance=ExtResource("3_k2kom")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(-1, 1)
-
-[node name="Planet4" parent="ParticlePathing" unique_id=1842489898 instance=ExtResource("3_k2kom")]
-position = Vector2(-1, 1)
-scale = Vector2(1.125, 1.125)
-
-[node name="Planet5" parent="ParticlePathing" unique_id=970036660 instance=ExtResource("3_k2kom")]
-position = Vector2(-1, 1)
-
-[node name="Planet6" parent="ParticlePathing" unique_id=330445079 instance=ExtResource("3_k2kom")]
-position = Vector2(-1, 1)
-scale = Vector2(0.92, 0.92)
+planets_to_spawn = Array[bool]([true, true, false, true, true, false, true, true, false, true, true, false])
 
 [node name="Monsta" parent="." unique_id=161056806 instance=ExtResource("4_eq008")]
 position = Vector2(586, 323)
