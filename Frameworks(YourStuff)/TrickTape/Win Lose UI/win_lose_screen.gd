@@ -27,8 +27,8 @@ class_name WinLoseScreen extends Control
 
 
 
-func _ready() -> void:
-	lost()
+#func _ready() -> void:
+	#lost()
 
 #endregion
 
