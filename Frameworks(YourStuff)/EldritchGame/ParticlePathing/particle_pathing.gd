@@ -24,6 +24,8 @@ func _ready() -> void:
 
 func do_planet_beat_effect() -> void:
 	for planet : Planet in planets:
+		if !is_instance_valid(planet):
+			continue
 		planet.do_beat_effect()
 
 
