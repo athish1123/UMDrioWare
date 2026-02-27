@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dro5d573niwan"]
+
+[ext_resource type="Script" uid="uid://6cxuvycm8n6m" path="res://Frameworks(YourStuff)/Mall/main_mall_game.gd" id="1_ddgo5"]
+[ext_resource type="Script" uid="uid://b3b0ntdbxk1el" path="res://Frameworks(YourStuff)/Mall/timer_to_lose.gd" id="2_fky30"]
+
+[node name="MainMallGame" type="Node2D" unique_id=30059727]
+script = ExtResource("1_ddgo5")
+
+[node name="Timer" type="Timer" parent="." unique_id=1689825368]
+wait_time = 5.0
+one_shot = true
+autostart = true
+script = ExtResource("2_fky30")
+
+[node name="TimerLabel" type="Label" parent="Timer" unique_id=570218496]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
