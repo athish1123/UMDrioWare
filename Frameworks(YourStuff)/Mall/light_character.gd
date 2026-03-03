@@ -12,14 +12,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.y = move_toward(velocity.y, 0, speed)
-	if position.x >= 460:
-		position.x = 460
-	elif position.x <= -450:
-		position.x = -450
-	if position.y >= 200:
-		position.y = 200
-	elif position.y <= -175:
-		position.y = -175
+	if position.x >= 1152:
+		position.x = 1152
+	elif position.x <= -0:
+		position.x = -0
+	if position.y >= 648:
+		position.y = 648
+	elif position.y <= 0:
+		position.y = 0
 		
 	print(position)
 	
