@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c302lviukvkgv" path="res://Frameworks(YourStuff)/EldritchGame/Instructions/introduction_screen.gd" id="1_4l27e"]
 [ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Frameworks(YourStuff)/EldritchGame/Effect Components/Scripts/Effects/node2D_effect.gd" id="2_4l27e"]
 [ext_resource type="Texture2D" uid="uid://opfhngr4vm2c" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Intro_Screen.png" id="3_almnl"]
+[ext_resource type="Texture2D" uid="uid://iv4vb8qokgiy" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Intro2.png" id="4_c08fr"]
 
 [sub_resource type="Animation" id="Animation_c08fr"]
 length = 0.001
@@ -114,6 +115,70 @@ _data = {
 &"intro": SubResource("Animation_bekip")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bekip"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(0, 0, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msnbl"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(1200, 0, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho43e"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(2400, 0, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lrmt"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(0, 700, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5acfp"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(1200, 700, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5vmd"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(2400, 700, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e508p"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(0, 1400, 1200, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqv6"]
+atlas = ExtResource("4_c08fr")
+region = Rect2(1200, 1400, 1200, 700)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6hjh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bekip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msnbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho43e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lrmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5acfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5vmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e508p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqv6")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
+
 [node name="IntroductionScreen" type="Node2D" unique_id=773554877]
 process_mode = 3
 z_index = 5
@@ -128,9 +193,15 @@ ease_type = 2
 metadata/_custom_type_script = "uid://cv1tqomq6d35i"
 
 [node name="IntroScreen" type="Sprite2D" parent="." unique_id=1980782012]
+visible = false
 texture = ExtResource("3_almnl")
 hframes = 3
 vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=981673901]
 libraries/ = SubResource("AnimationLibrary_msnbl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1643347732]
+sprite_frames = SubResource("SpriteFrames_x6hjh")
+animation = &"new_animation"
+frame_progress = 0.78673697
