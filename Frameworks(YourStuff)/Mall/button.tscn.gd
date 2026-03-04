@@ -36,10 +36,11 @@ func _process(delta):
 		rotation_degrees = _base_rotation + sin(_time) * wiggle_amount
 		if Input.is_action_just_pressed("space"):
 			var hire : RigidBody2D = HIRED_.instantiate()
+			
 			add_child(hire)
 			hire.global_position = circle_player.get_child(0).global_position
 			hire.apply_central_impulse(Vector2(0,-300))
-			
+			hire.show()
 			adaptive_music.increase_volume(index, -10.0, .1,1)
 			clicked = true
 			main_mall_game.add_player(self)

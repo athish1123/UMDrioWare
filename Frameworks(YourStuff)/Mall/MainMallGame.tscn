@@ -650,7 +650,7 @@ shape = SubResource("RectangleShape2D_cy6ea")
 [node name="CirclePlayer" parent="Buttons/GuitarButton" unique_id=374275216 instance=ExtResource("7_wbn2r")]
 
 [node name="Circle" parent="Buttons/GuitarButton/CirclePlayer" index="0" unique_id=1209456986]
-position = Vector2(845, 184)
+position = Vector2(847, 169)
 
 [node name="HornButton" type="Button" parent="Buttons" unique_id=438940120]
 self_modulate = Color(1, 1, 1, 0)
@@ -678,7 +678,7 @@ shape = SubResource("RectangleShape2D_cy6ea")
 [node name="CirclePlayer" parent="Buttons/HornButton" unique_id=1647736784 instance=ExtResource("7_wbn2r")]
 
 [node name="Circle" parent="Buttons/HornButton/CirclePlayer" index="0" unique_id=1209456986]
-position = Vector2(873, 413)
+position = Vector2(602, 358)
 
 [node name="BassButton" type="Button" parent="Buttons" unique_id=651062089]
 self_modulate = Color(1, 1, 1, 0)
@@ -734,7 +734,7 @@ shape = SubResource("RectangleShape2D_cy6ea")
 [node name="CirclePlayer" parent="Buttons/PianoButton" unique_id=369587253 instance=ExtResource("7_wbn2r")]
 
 [node name="Circle" parent="Buttons/PianoButton/CirclePlayer" index="0" unique_id=1209456986]
-position = Vector2(592, 335)
+position = Vector2(825, 532)
 
 [node name="AdaptiveMusic" type="Node" parent="Buttons" unique_id=200767823 node_paths=PackedStringArray("tracks")]
 script = ExtResource("12_lxct2")
@@ -775,7 +775,6 @@ root_node = NodePath("../Curtain")
 libraries/ = SubResource("AnimationLibrary_vfs7l")
 
 [node name="Curtain" type="Sprite2D" parent="." unique_id=858603811]
-visible = false
 position = Vector2(821, 17)
 scale = Vector2(5.8998637, 5.8998637)
 texture = ExtResource("7_wmwhb")
@@ -784,7 +783,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 96.39108, 106.66256)
 
 [node name="Curtain2" type="Sprite2D" parent="." unique_id=659708450]
-visible = false
 position = Vector2(256, 13.9999695)
 scale = Vector2(5.8998637, 5.8998637)
 texture = ExtResource("7_wmwhb")
