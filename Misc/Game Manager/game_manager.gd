@@ -42,6 +42,7 @@ const SPEED_UP_POINT = 2
 var new_scene : Game = null
 
 func _ready() -> void:
+	start_games()
 	return
 #region Loader of files in Games folder
 
